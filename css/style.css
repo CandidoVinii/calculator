@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 header{
@@ -15,8 +16,9 @@ main{
     align-items: center;
 }
 
-.input{
+input{
     margin-bottom: 20px;
+    color: black;
 }
 
 .operacoes{
@@ -25,13 +27,17 @@ main{
 
 .buttons{
     padding: 10px;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
     margin-left: 25px;
+    color: white;
 }
 
 .result {
     margin-top: 30px;
     width: 300px;
-    height: 20px;
+    height: 30px;
     border: solid black 1px;
     display: flex;
     justify-content: center;
