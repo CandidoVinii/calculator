@@ -46,3 +46,19 @@ input{
 .color-red{
     border: solid red 2px;
 }
+
+footer{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 648px;
+}
+
+h3, a{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
