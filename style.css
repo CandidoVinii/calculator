@@ -36,3 +36,11 @@ main{
     display: flex;
     justify-content: center;
 }
+
+.color-red{
+    border: solid red 2px;
+}
+
+.red{
+    background-color: red;
+}
