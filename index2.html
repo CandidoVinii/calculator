@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu primeito programa....</title>
+    <style>
+       body {
+         background-color: blueviolet;
+       }
+    </style>
+</head>
+<body>
+  <input placeholder="Digite seu nome" type="text" id="inputName">
+
+  <button>Enviar</button>
+
+  <p>Já me livrei da maldição</p>
+
+  <div id="message"></div>
+
+    <script>
+      // Na linha 25 a variavel const, eu resgato o botão e deixo ele guardado para usar abaixo.
+        const btn = document.querySelector('button');
+
+      /* Na linha 31, eu atribui um evento ao nome da variavel que resgatei o botão anteriormente,
+      usei o addEventListener para adicionar um evento ao pressionar ou realizar alguma ação.
+      No exemplo eu usei o click, então toda vez que eu clicar no botão o script vai executar
+      o código que está dentre as chaves da Function.*/
+        btn.addEventListener('click', function() {
+      /* Na linha 34 eu resgatei o input no qual preenchemos com o nosso nome, note que 
+      existe um .value, esse atributo faz com que resgatamos apenas o texto que digitamos*/
+          const input = document.getElementById("inputName").value;
+      /* Na linha 37 eu resgatei a DIV, div são caixas que renderizam o nosso conteúdo,
+      e para que consiga mostrar o valor do input na tela eu preciso de uma DIV */
+          const div = document.getElementById("message");
+      /* Na linha 41 eu criei uma variavel com o document.createElement, ele cria um elemento
+      dinamicamente, sem ter que escrevermos no arquivo ou body do html, eu passei a tag de titulo
+      h2.*/
+          const p = document.createElement("h2");
+      /* Na linha 45 eu pego minha variavel criada acima e adiciono o atributo innerText,
+      o atributo innerText altera o conteudo do elemento dinamicamente. Depois eu inseri o 
+      texto entre Crases e o cifrão para concatenar com o da variavel criada na linha 34*/
+          p.innerText = `Seja bem vindo ${input}`;
+      /* Aqui eu uso a propiedade appendChild para anexar um filho na div, resgatada na linha 37,
+      e o conteudo a ser anexado será o criado na linha 41*/
+          div.appendChild(p);
+        });
+      </script>
+</body>
+</html>

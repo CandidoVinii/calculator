@@ -8,9 +8,7 @@ const divResult = document.querySelector('.result');
 const pResult = document.querySelector('#pResult');
 const buttons = document.querySelectorAll('.buttons');
 
-
-
-addButton.addEventListener('click', function(){
+function sum(){
     const result = parseInt(input1.value) + parseInt(input2.value);
     if (input1.value !== 'number' || input1.value == '' || input2.value !== 'number' || input2.value == '') {
         divResult.classList.remove('red');  
@@ -20,45 +18,46 @@ addButton.addEventListener('click', function(){
         divResult.classList.add('red');
 };
     pResult.innerText = result;
-})
+}
 
-subButton.addEventListener('click', function(){
+function subtracao (){
     const result = parseInt(input1.value) - parseInt(input2.value);
     if (input1.value !== 'number' || input1.value == '' || input2.value !== 'number' || input2.value == '') {
         divResult.classList.remove('red');  
-
+        
     } if(input1.value == 'number' || input1.value == '' || input1.value == 'number' || input2.value == '') {
         pResult.innerText = ''; 
         divResult.classList.add('red');
 };
     pResult.innerText = result;
-})
+}
 
-divButton.addEventListener('click', function(){
+function div(){
     const result = parseInt(input1.value) / parseInt(input2.value);    
     if (input1.value !== 'number' || input1.value == '' || input2.value !== 'number' || input2.value == '') {
         divResult.classList.remove('red');  
-
+        
     } if(input1.value == 'number' || input1.value == '' || input1.value == 'number' || input2.value == '') {
         pResult.innerText = ''; 
         divResult.classList.add('red');
-};
+    };
     pResult.innerText = result;
-})
+}
 
-multButton.addEventListener('click', function(){
+function mult(){
     const result = parseInt(input1.value) * parseInt(input2.value);
     if (input1.value !== 'number' || input1.value == '' || input2.value !== 'number' || input2.value == '') {
         divResult.classList.remove('red');  
-
+        
     } if(input1.value == 'number' || input1.value == '' || input1.value == 'number' || input2.value == '') {
         pResult.innerText = ''; 
         divResult.classList.add('red');
-};
+    };
     pResult.innerText = result;
-})
+}
 
-  function changeColor(event) {
+
+function changeColor(event) {
     if (event.target.className === 'color-red') {
         event.target.classList.remove('color-red');
     } else {
@@ -66,5 +65,9 @@ multButton.addEventListener('click', function(){
     }
 }
 
+addButton.addEventListener('click', sum);
+subButton.addEventListener('click', subtracao);
+divButton.addEventListener('click', div);
+multButton.addEventListener('click', mult);
 input1.addEventListener('click', changeColor );
 input2.addEventListener('click', changeColor );
